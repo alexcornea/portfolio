@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/post1_style.css') }}">
+    
+    <title>Little Dream Gardens</title>
+</head>
+<body>
+
+    <section class="s1">
+        <div class="main-container">
+
+            <div class="intro-wrapper">
+                <div class="nav-wrapper">
+                    <ul id="navigation">
+                        <li><a href="{{url_for('home')}}">Home</a></li>
+                    </ul>
+
+                    <div class="dots-wrapper">
+                        <div id="dot-1" class="browser-dot">
+                        </div>
+                        
+                        <div id="dot-2" class="browser-dot">    
+                        </div>
+                        
+                        <div id="dot-3" class="browser-dot">   
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="column">
+                    <h2 class="post-title" >Little Dream Gardens</h1>
+
+                    <p>This is a website which I've built for my girlfriends hobby which is creating miniature gardens. She wanted to show her creations and also teach people how to do theyr own miniature gardens and other DIY projects. As this was my first website and because I was doing on my spare time it took me a few months to finish, but it was a really enjoyable experience.
+                    </p>
+                    
+                    <img src="{{url_for('static', filename='/images/garden01.jpg')}}" alt="">
+
+                    <p>After learning the Python basics, I've decided to check out Django. I really liked using it and because the documentation is quite easy to understand, I've decided to create the website with this great framework. One might ask why didn't I use WordPress, which is definitely a very good chose for this type of website. The reason for this is that I wanted to use a Python related framework as I wanted to further expand my knowledge of back-end with this language.
+                    </p>
+
+                    <p>As for the database I used PostgreSQL as it seem a powerful, advanced and fairly easy to use option, especially if you use the pgAdmin 4 platform with it. The database stores the contents of the posts. For the front-end part I've used basic HTML and CSS with a little help from Bootstrap and for some elements I used JavaScript/jQuery. I did my best to make the website responsive, so it should work well on any device and browser.
+                    </p>
+
+                    <p>After the website was ready and tested succesfully on local development server, I used Docker to create the image for it and also used NGINX for the web server part, as for the encryption, Let's Encrypt was used. For deployment I used AWS/EC2 and used Amazon RDS for the database side.</p>
+
+                    <p>If you would like to visit my website to see what I've created, this is the address: <a href="https://littledreamgardens.com/">www.littledreamgardens.com</a>. To check the source code visit my <a href="https://github.com/alexcornea/little-dream-gardens_deploy">GitHub</a> page.</p>
+                    
+                    <br>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="footer-distributed">
+
+        <div class="footer-right">
+            <a href="https://www.linkedin.com/in/alex-cornea-474377131"><img class="linkedin" src="{{url_for('static', filename='/images/linkedin-footer.png')}}"></a>
+            <a href="https://www.hackerrank.com/alexcornea"><img class="hackerrank" src="{{url_for('static', filename='/images/hacker-footer.png')}}"></></a>
+            <a href="https://github.com/alexcornea"><img class="github" src="{{url_for('static', filename='/images/github-footer.png')}}"></a>
+    
+        </div>
+    
+        <div class="footer-left">
+    
+            <p class="footer-links">
+            <a class="link-1" href="{{url_for('home')}}">Home</a>
+            <a href="{{url_for('post1')}}">Little Dream Gardens</a>
+            <a href="{{url_for('post2')}}">Portfolio</a>
+            <a href="{{url_for('post3')}}">Python Scripts</a>
+            </p>
+    
+            <p>Alex Cornea &copy; 2021</p>
+        </div>
+    
+    </footer>
+    
+    
+</body>
+</html>

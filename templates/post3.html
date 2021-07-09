@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/post1_style.css') }}">
+    
+    <title>Python Scripts</title>
+</head>
+<body>
+
+    <section class="s1">
+        <div class="main-container">
+
+            <div class="intro-wrapper">
+                <div class="nav-wrapper">
+                    <ul id="navigation">
+                        <li><a href="{{url_for('home')}}">Home</a></li>
+                    </ul>
+
+                    <div class="dots-wrapper">
+                        <div id="dot-1" class="browser-dot">
+                        </div>
+                        
+                        <div id="dot-2" class="browser-dot">    
+                        </div>
+                        
+                        <div id="dot-3" class="browser-dot">   
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="column-p3">
+                    <h2 class="post-title" >Python Scripts</h1>
+
+                    <h5>File sorter</h5>
+
+                    <p>The purpouse of this script is to move the files from a specified folder and sort them in specific folders, depending on the files extension. For this file I used the following Python libraries: os, sys, posix and shutil. The code at the moment just has some generic file types for the sake of keeping the code simple for this portfolio.You can check the <a href="https://github.com/alexcornea/files-sorter">source code</a> on my GitHub account as well.
+                    </p>
+
+                    <img src="{{url_for('static', filename='/images/file-sorter.png')}}" alt="">
+
+                    <h5>Roman numbers converter</h5>
+
+                    <p>As the name says this is a script that converts any numbers into roman numerals. For this script I used only the os Python library. You can check the <a href="https://github.com/alexcornea/roman-digits">source code</a> on my GitHub account as well.
+                    </p>
+
+                    <img src="{{url_for('static', filename='/images/roman-digits.png')}}" alt="">
+
+                    <h5>String finder</h5>
+
+                    <p>This is a script which will list the number of files with the same specified string. The Python libraries used for this are os and sys.
+                    </p>
+                    
+
+                    <img src="{{url_for('static', filename='/images/files-string.png')}}" alt="">
+
+                    <p>If you would like to check other problems and challenges I've solved please visit my <a href="https://www.hackerrank.com/alexcornea">Hacker Rank </a> profile.</p>
+                    <br>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="footer-distributed">
+
+        <div class="footer-right">
+            <a href="https://www.linkedin.com/in/alex-cornea-474377131"><img class="linkedin" src="{{url_for('static', filename='/images/linkedin-footer.png')}}"></a>
+            <a href="https://www.hackerrank.com/alexcornea"><img class="hackerrank" src="{{url_for('static', filename='/images/hacker-footer.png')}}"></></a>
+            <a href="https://github.com/alexcornea"><img class="github" src="{{url_for('static', filename='/images/github-footer.png')}}"></a>
+    
+        </div>
+    
+        <div class="footer-left">
+    
+            <p class="footer-links">
+            <a class="link-1" href="#">Home</a>
+            <a href="{{url_for('post1')}}">Little Dream Gardens</a>
+            <a href="{{url_for('post2')}}">Portfolio</a>
+            <a href="{{url_for('post3')}}">Python Scripts</a>
+            </p>
+    
+            <p>Alex Cornea &copy; 2021</p>
+        </div>
+    
+    </footer>
+    
+</body>
+</html>

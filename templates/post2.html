@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/post1_style.css') }}">
+
+    <title>Portfolio</title>
+</head>
+<body>
+
+    <section class="s1">
+        <div class="main-container">
+
+            <div class="intro-wrapper">
+                <div class="nav-wrapper">
+                    <ul id="navigation">
+                        <li><a href="{{url_for('home')}}">Home</a></li>
+                    </ul>
+
+                    <div class="dots-wrapper">
+                        <div id="dot-1" class="browser-dot">
+                        </div>
+                        
+                        <div id="dot-2" class="browser-dot">    
+                        </div>
+                        
+                        <div id="dot-3" class="browser-dot">   
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="column">
+                    <h2 class="post-title" >Portfolio</h1>
+
+                    <p>This post it's about the portfolio you are currently visiting. I wanted to create something simple so I can show the projects I created so far. After creating my first big project with Django, I wanted to give Flask a try and create this small website with it. As I don't have a lot of content I decided to not use a database. 
+                    </p>
+
+                    <p>As expected for the front-end part I used HTML and CSS and a bit of JavaScript. Docker, once again was used to create the image but this time I used Heroku instead of AWS. For the source code please check <a href="https://github.com/alexcornea/portfolio">this GitHub link</a>.</p>
+                    
+                    <img id='portfolio' src="{{url_for('static', filename='/images/portfolio-02.jpg')}}"  alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-distributed">
+
+        <div class="footer-right">
+            <a href="https://www.linkedin.com/in/alex-cornea-474377131"><img class="linkedin" src="{{url_for('static', filename='/images/linkedin-footer.png')}}"></a>
+            <a href="https://www.hackerrank.com/alexcornea"><img class="hackerrank" src="{{url_for('static', filename='/images/hacker-footer.png')}}"></></a>
+            <a href="https://github.com/alexcornea"><img class="github" src="{{url_for('static', filename='/images/github-footer.png')}}"></a>
+    
+        </div>
+    
+        <div class="footer-left">
+    
+            <p class="footer-links">
+            <a class="link-1" href="#">Home</a>
+            <a href="{{url_for('post1')}}">Little Dream Gardens</a>
+            <a href="{{url_for('post2')}}">Portfolio</a>
+            <a href="{{url_for('post3')}}">Python Scripts</a>
+            </p>
+    
+            <p>Alex Cornea &copy; 2021</p>
+        </div>
+    
+    </footer>
+    
+</body>
+</html>
