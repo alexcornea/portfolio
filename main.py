@@ -1,5 +1,4 @@
 from flask import Flask, render_template, send_file, request
-from forms import ContactForm
 from flask_mail import Mail, Message
 import os
 
@@ -55,6 +54,6 @@ def post3():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(ssl_context=('cert.pem', 'key.pem'))
 
 
