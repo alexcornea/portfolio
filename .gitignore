@@ -9,6 +9,8 @@ venv/
 env*
 dist/
 build/
+key.pem
+cert.pem
 *.egg
 *.egg-info/
 _mailinglist

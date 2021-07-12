@@ -6,7 +6,7 @@ import os
 app = Flask(__name__)
 
 app.config.update(
-DEBUG=True,
+DEBUG=False,
 #EMAIL SETTINGS
 MAIL_SERVER='smtp.gmail.com',
 MAIL_PORT=465,
@@ -55,5 +55,3 @@ def post3():
 
 if __name__ == '__main__':
     app.run(ssl_context=('cert.pem', 'key.pem'))
-
-
